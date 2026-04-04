@@ -43,8 +43,8 @@ xmlsec
 motor
 pydantic
 # Custom repos, with patches applied
-eve
-eve-elastic
+eve @ git+https://github.com/superdesk/eve@async
+eve-elastic @ git+https://github.com/superdesk/eve-elastic@async
 quart
 quart_babel
 asgiref
