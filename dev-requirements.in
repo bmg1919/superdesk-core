@@ -1,0 +1,27 @@
+black
+flake8
+flake8-bugbear
+flake8-docstrings
+pep8
+pyflakes
+pydocstyle
+httmock
+wooper
+requests-mock
+responses
+pytest
+pytest-asyncio
+pytest-env
+pytest-timeout
+python3-saml
+moto[sqs]
+pyexiv2
+snowballstemmer
+aioresponses
+pyexiftool
+
+-r mypy-requirements.txt
+
+# -e .
+# -e git+https://github.com/superdesk/superdesk-planning.git@develop#egg=superdesk_planning
+# -e git+https://github.com/superdesk/sams.git@develop#egg=sams_client&subdirectory=src/clients/python/

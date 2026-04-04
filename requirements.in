@@ -1,0 +1,54 @@
+urllib3
+elasticsearch[async]
+flask-mail
+arrow
+pillow
+bcrypt
+blinker
+celery[redis]
+cerberus
+redis
+kombu
+feedparser
+hachoir
+HermesCache
+python-magic
+ldap3
+pytz
+tzlocal
+sentry-sdk[quart]
+requests
+boto3
+websockets
+PyYAML
+lxml
+lxml_html_clean
+python-twitter
+chardet
+pymongo
+croniter
+python-dateutil
+unidecode
+authlib
+draftjs-exporter[lxml]
+regex
+flask-oidc-ex
+# Fix an issue with MarkupSafe 2.1.0 not exporting `soft_unicode`
+MarkupSafe
+reportlab
+pyjwt
+pymemcache
+xmlsec
+# Async libraries
+motor
+pydantic
+# Custom repos, with patches applied
+eve
+eve-elastic
+quart
+quart_babel
+asgiref
+aioboto3
+# Patch Quart, Asyncio to work with Flask extensions
+# TODO-ASYNC: Remove this with our own flask patch (as quart-flask-patch also patches asyncio)
+quart-flask-patch

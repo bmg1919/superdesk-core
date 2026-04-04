@@ -1,3 +1,58 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Superdesk-Core"
+dynamic = ["dependencies"]  # version can be dynamic as well
+version = "3.5.0-dev"
+description = "Superdesk Core library"
+readme = "README.md"                    # or whatever your long description file is
+authors = [
+    { name = "Petr Jasek", email = "petr.jasek@sourcefabric.org" },
+]
+license = { text = "GPLv3" }
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+
+[project.urls]
+Homepage = "https://github.com/superdesk/superdesk-core"
+Repository = "https://github.com/superdesk/superdesk-core"
+
+[tool.setuptools]
+packages = { find = { exclude = ["tests*", "features*"] } }
+include-package-data = true
+platforms = ["any"]
+
+[tool.setuptools.package-data]
+superdesk = [
+    "templates/*.txt",
+    "templates/*.html",
+    "locators/data/*.json",
+    "io/data/*.json",
+    "data_updates/*.py",
+    "data_updates/*.js",
+    "translations/*.po",
+    "translations/*.mo",
+]
+apps = [
+    "prepopulate/*.json",
+    "prepopulate/data_init/*.json",
+    "io/data/*.json",
+]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
 [tool.black]
 line-length = 120
 target-version = ['py310']

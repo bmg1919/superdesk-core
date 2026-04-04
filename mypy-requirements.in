@@ -1,0 +1,11 @@
+mypy
+mypy-extensions
+types-aioboto3
+types-chardet
+types-click
+types-croniter
+types-python-dateutil
+types-pytz
+types-PyYAML
+types-requests
+typing-extensions
